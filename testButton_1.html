@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script type="text/javascript">   //使用Javascript +1 與 -1，跳出警告視窗顯示
+        var currentValue = 0;
+        var add = function(valueToAdd){
+            alert("adding: " + valueToAdd);
+            currentValue += valueToAdd;
+            document.getElementById('number').innerHTML = currentValue;
+        };
+    </script>
+
+    </head>
+    <body>
+        <div id="text">Number of eggs:<span id="number">0</span><div>
+        <a href="javascript:add(1)">Plus 1</a>
+        <a href="javascript:add(-1)">Minus 1</a>
+
+    </body>
+</html> 

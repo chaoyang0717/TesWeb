@@ -1,0 +1,332 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>R202義式料理點餐系統</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"><!--bootstrap讀取的檔案-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+<script language="Javascript" type="text/javascript" src='resize_image.js'></script>
+<script src="jquery/jquery.js"></script><!--js讀取的檔案-->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="lightbox/lightbox.css" type="text/css" />
+<script type="text/javascript" src="lightbox/lightbox.js"></script>  <!--使用lightbox JS，點小圖跳出大圖-->
+<style>
+body {background-color:#D2E9FF}
+h2 {cursor:pointer; margin:2px; padding:10px; }
+</style>
+
+
+<script src="./js/jquery.js"></script>
+
+<script>      // 餐點類別折疊，第一個類別自動展開
+$(document).ready( function () {  
+
+  $('h2').next().hide();  // 本文都隱藏
+
+  $('h2:first').next().show();  // 第一個本文顯示
+
+  // 指定標題具切換功能
+  $('h2').click( function () { 
+    $(this).next().slideToggle();
+  });
+
+ });
+</script>
+<script>     //滑鼠移到小圖，顯示大圖
+function change(s)
+{
+	var pic = '';
+	
+	switch(s)
+	{
+		case 1:
+			pic = 'images_b/01.jpg';
+			break;
+			  
+		case 2:
+			pic = 'images_b/02.jpg';
+			break;
+			  
+		case 3:
+			pic = 'images_b/03.jpg';
+			break;
+			  
+		case 4:
+			pic = 'images_b/04.jpg';
+			break;
+			  
+		case 5:
+			pic = 'images_b/05.jpg';
+			break;
+			  
+		case 6:
+			pic = 'images_b/06.jpg';
+			break;
+			  
+		case 7:
+			pic = 'images_b/07.jpg';
+			break;
+			  
+
+			  
+		default:			  
+			pic = 'images_b/default.jpg';
+	}
+	
+	
+	var obj = document.getElementById('picture');
+	obj.src = pic;
+}
+</script>
+</head>
+<br>
+<br>
+<body align="center">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role=navigation>
+<div class=container>
+     <div class=navbar-header>
+        <button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar> 
+          <span class=sr-only>Toggle navigation</span> 
+          <span class=icon-bar></span> 
+          <span class=icon-bar></span> 
+          <span class=icon-bar></span> 
+        </button> 
+        <a class=navbar-brand href=#>R202義式料理點餐系統</a>
+     </div>
+        <div id=navbar class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role=form>
+            <div class=form-group>
+              <input placeholder=Email class=form-control>
+            </div>
+            &nbsp;
+            <div class=form-group>
+              <input type=password placeholder=Password class=form-control>
+            </div>
+            &nbsp;
+            <button type=submit class="btn btn-success">Sign in</button>
+          </form>
+        </div>
+     </div>
+</nav>
+<img src="images/banner-01.jpg">
+
+ <div class=jumbotron>
+   <div class=container>
+     <div class="col-xs-3">
+     </div>
+     <div class="col-xs-6">
+                <div class="container clearfix">              
+                  <ol class="breadcrumb">
+                    <li><a href="#">登入</a></li>
+                    <li><a href="#">註冊會員</a></li>
+                    <li><a href="#">使用簡介</a></li>
+                  </ol>
+                </div>
+ 
+       <h2><div style="width=300px;height=60px;border:3px #cccccc dashed;"> 義大利麵 Pasta</div></h2>
+       <div style="display: block;">
+       <div class=container>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <a href="images_b/01.jpg" rel="lightbox" title="義大利麵"><img src="images_s/01.jpg" width="150" height="94" onmouseover="change(1);" /></a>
+           </p> 
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/02.jpg" width="150" height="94" onmouseover="change(2);" />
+           </p> 
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/03.jpg" width="150" height="94" onmouseover="change(3);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/04.jpg" width="150" height="94" onmouseover="change(4);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/05.jpg" width="150" height="94" onmouseover="change(5);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/07.jpg" width="150" height="94" onmouseover="change(7);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+       </div>
+       </div>
+       <p>
+       <h2><div style="width=300px;height=60px;border:3px #cccccc dashed;"> 披薩 Pizza</div></h2>
+       <div style="display: none;">
+       <div class=container>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza01.jpg" width="150" height="94" onmouseover="change(1);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza02.jpg" width="150" height="94" onmouseover="change(2);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza03.jpg" width="150" height="94" onmouseover="change(3);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza04.jpg" width="150" height="94" onmouseover="change(4);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza05.jpg" width="150" height="94" onmouseover="change(5);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza06.jpg" width="150" height="94" onmouseover="change(6);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/pizza07.jpg" width="150" height="94" onmouseover="change(7);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+       </div>
+       </div>
+       <p>  
+       <h2><div style="width=300px;height=60px;border:3px #cccccc dashed;"> 飲料 - 茶類或咖啡 </div></h2>
+       <div style="display: none;">
+       <div class=container>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_01.jpg" width="150" height="94" onmouseover="change(1);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_02.jpg" width="150" height="94" onmouseover="change(2);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drinK_03.jpg" width="150" height="94" onmouseover="change(3);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_05.jpg" width="150" height="94" onmouseover="change(5);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_06.jpg" width="150" height="94" onmouseover="change(6);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_07.jpg" width="150" height="94" onmouseover="change(7);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_08.jpg" width="150" height="94" onmouseover="change(7);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_09.jpg" width="150" height="94" onmouseover="change(7);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+         <div class="col-xs-6 col-lg-4">  
+           <h3>菜名</h3>
+           <p>
+           <img src="images_s/drink_10.jpg" width="150" height="94" onmouseover="change(7);" />
+           </p>
+           <h4>簡介</h4>
+         </div>
+       </div>
+       </div>
+
+     
+     </div>
+     <div class="col-xs-3">
+     </div>  
+</div>
+</div>
+
+
+</p>
+ <p><img id="picture" src="images_b/01.jpg" width="500" height="300" /></p>
+<hr><footer></footer>      
+          <div class=container>
+             <div class=row>
+               <div class=col-md-4>
+                 <h3>簡介</h3>
+                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+               </div>
+               <div class=col-md-4>
+                 <h3>理念</h3>
+                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>                
+               </div>
+               <div class=col-md-4>
+               <h3>成員</h3>
+               <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+               </div>
+             </div>
+          </div>
+          <hr>
+          <footer>
+          <p>&copy; Copyright : The 4th Group 2015</footer>
+          
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>R202線上點餐系統</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"><!--bootstrap讀取的檔案-->
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script language="Javascript" type="text/javascript" src='resize_image.js'></script>
+<script src="jquery/jquery.js"></script><!--js讀取的檔案-->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="lightbox/lightbox.css" type="text/css" />
+<script type="text/javascript" src="lightbox/lightbox.js"></script>  <!--使用lightbox JS，點小圖跳出大圖-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   <!--W3C School的Ajax -->
+<style>
+
+body {background-color:#D2E9FF}
+h2 {cursor:pointer; margin:2px; padding:10px; }
+
+</style>
+
+<style type="text/css">
+ 
+.fixed {    
+    position: fixed;     
+    top: 30px;    
+    margin-left: 950px;  
+    background-color: #fff ! important; 
+} 
+</style>
+
+<script >                                                        //使用 Shopping Cart Rolling Sticky
+$(document).ready(function() {  
+    // check where the shoppingcart-div is  
+    var offset = $('#shopping-cart').offset();  
+    $(window).scroll(function () {    
+        var scrollTop = $(window).scrollTop(); 
+        // check the visible top of the browser     
+        if (offset.top<scrollTop) {
+            $('#shopping-cart').addClass('fixed'); 
+        } else {
+            $('#shopping-cart').removeClass('fixed');   
+        }
+    }); 
+}); 
+</script>
+<script type="text/javascript">
+function add() {
+	  var ul = document.getElementById("list");
+	  var li = document.createElement("li");
+	  var msg = document.getElementById("id.name");
+	  li.appendChild(document.createTextNode(msg.value));
+	  ul.appendChild(li);
+	}
+</script>
+
+<script src="./js/jquery.js"></script>
+<script>      // 餐點類別折疊，第一個類別自動展開
+$(document).ready( function () {  
+
+  $('h2').next().hide();  // 本文都隱藏
+
+  $('h2:first').next().show();  // 第一個本文顯示
+
+  // 指定標題具切換功能
+  $('h2').click( function () { 
+    $(this).next().slideToggle();
+  });
+
+ });
+</script>
+
+</head>
+<br>
+<br>
+<body>
+<div class="row">
+         <div class="col-xs-6 col-lg-4">  
+           <h3>義大利麵A</h3>
+           <p>
+           <a href="images_b/01.jpg" rel="lightbox" title="義大利麵"><img src="images_s/01.jpg" width="150" height="94" /></a>
+           </p> 
+           <h4>簡介</h4>
+           <h4>金額&nbsp;
+           <span class="glyphicon glyphicon-usd" aria-hidden="true">123</span>
+           </h4>&nbsp;&nbsp;
+           <a button id="btn1" name="義大利麵A" onclick="add()"><i class="fa fa-cart-plus fa-2x"></i></a>
+         </div>
+         </div>
+
+
+
+         <div class="span-3 last" id="shopping-cart">    <!-- 使用 Sticky -->
+        
+        <h3><ul id="list">&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;您 的 點 餐 單&nbsp;&nbsp;&nbsp;</h3>
+           <p>
+           <li><i class="fa fa-check-square-o"></i><input type="text" value="">
+           <a href="#"><i class="fa fa-minus-square"></i></a>
+             <text type="text"> 數量</text> 
+           <a href="#"><i class="fa fa-plus-square"></i></a></li>
+           </p>
+           
+           <p>
+           <i class="fa fa-check-square-o"></i>&nbsp; X X X X X 
+           <a href="#"><i class="fa fa-minus-square"></i></a>
+             <text type="text"> 數量</text> 
+           <a href="#"><i class="fa fa-plus-square"></i></a>
+           </p>
+           </ul>
+                     
+        <h4><i class="fa fa-motorcycle"></i>
+        <td><select name="s1" id="s1">
+            <option value="X" SELECTED>請選擇外送或自取</option>
+            <option value="1">外送(加收服務費)</option>
+            <option value="2">自取</option>
+            </select>
+        </td></h4>
+        <hr><footer></footer> 
+        <h4>金額總計</h4>   
+        <hr><footer></footer>    
+        <button type="button" class="btn btn-success">確認送出</button> 
+        <hr><footer></footer>
+
+      </div>              <!-- 使用 Sticky 結尾-->
+</body>
+</html>

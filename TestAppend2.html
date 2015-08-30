@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">             //使用Javascript加入id的value內容至點餐單
+function add(id) {
+      var ol = document.getElementById("list");
+      var li = document.createElement("li");
+      var msg = document.getElementById("Append_"+id);
+      li.appendChild(document.createTextNode(msg.value));
+      ol.appendChild(li);
+    }
+</script>
+</head>
+<body>
+<button type="submit" name="msg" id="Append_A" onclick="add('A')" value="Append A">Button 1</button>
+<button type="submit" name="msg" id="Append_B" onclick="add('B')" value="Append B">Button 2</button>
+<ul id="list">
+  <li>
+  
+  </li>
+</ul>
+</body>
+</html>

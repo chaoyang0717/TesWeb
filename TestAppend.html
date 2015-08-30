@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">           //會產生undefined內容
+function add() {
+      var ul = document.getElementById("list");
+      var li = document.createElement("li");
+      var msg = document.getElementsByName("msg");      
+      li.appendChild(document.createTextNode(msg[0].value));
+      ul.appendChild(li);
+    }
+</script>
+</head>
+<body>
+<button type="submit" name="msg" id="Append_A" onclick="add()" value="Append A">Button 1</button>
+<button type="submit" name="msg" id="Append_B" onclick="add()" value="Append B">Button 2</button>
+<ul id="list">
+    <li>aaa</li>
+    <li>bbb</li>
+</ul>
+</body>
+</html>
